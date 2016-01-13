@@ -1,38 +1,59 @@
 <html>
+  <meta charset="utf-8" />
   <head>
     <title>EditorConfig</title>
   </head>
   <body>
+    <h2>Contexto</h2>
     <p>
-      A menudo un proyecto(dependiendo de la complejidad) es mantenido por más de un desarollador es entonces
-      muy normal encontrarnos en la situación en la que nos toqué modificar el archivo que alguien más creó.
-      Cuando el programador necesite hacer alguna modificación en un archivo debe utilizar
-      el mismo estilo de programación con el que ha sido programado y no tener conflictos posteriores con las futuras modificaciones.
-      Por ejemplo:
-      Se necesita agregar el item "Donar" al menú principal de <a href="#">frontendlabs.io</a>
-      Para no complicarnos demasiado, vamos a asumir que La estructura que utilizó el programador que creó el menu fue:
-    </p>
-    <code>
-			<nav>
-				<ul>
-					<li> Inicio</li>
-				</ul>
-			</nav>
-    </code>
-    <p> A simple vista lo único que tendríamos que hacer es la siguiente modificación</p>
-    <code>
-			<nav>
-				<ul>
-					<li> Inicio </li>
-					<li> Donar </li>
-				<ul>
-			</nav>
-    <code>
+      A menudo un proyecto(dependiendo de su complejidad) es programado por más
+      de un desarollador,es entonces  muy normal encontrarse con la situación en
+      la que un programador A tendrá que modificar el archivo X que creo un
+      programador B. Por buenas practicas, antes de que el programador A empiece
+      el cambio en el archivo X, debe considerar <b> el  estándar en la que el
+      programador B trabajó</b>, esto ayudará a poder evitar futuros conflictos
+      en los archivos y como consecuencia, que el proyecto sea totalmente mantenible
+      en el tiempo por cualquier programador. Parte de los estándares de programación son los
+      estilos de código, existe en la actualidad un lista variada de todos los estilos
+      de código que podemos aplicar pero los más usados son:
+      <ul>
+        <li>
+          <b> Estilo de identación(indent_style):</b> Tabs o espacios.
+        </li>
+        <li>
+          <b> Ancho de indentación(indent_size): </b> Número de columnas por indentación.
+        </li>
+        <li>
+          <b> Final de línea(end_of_line): </b> Control de salto de linea (LF, CR, CRLF).
+        </li>
+        <li>
+          <b> Charset(charset): </b> Control del charset
+        </li>
+        <li>
+          <b> Recortar espacios en blanco(trim_trailing_whitespace): </b> Eliminar
+          cualquier espacio en blanco precedido por una nueva linea.
+        </li>
+        <li>
+          <b> Insertar nueva línea al final del archivo </b> Insertar un nueva línea
+          al final del archivo(esta una
+          <a href="http://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline">buena práctica muy recomendada</a>).
+        </li>
+      </ul>
     <p>
-      Y listo. Hacemos las pruebas necesarias, subimos nuestro cambio a producción. Y todo va bien.Todo Funciona. Pero no.
-      No es suficiente con que solo funcione, porque al hacer la modificación ni siquiera revisamos si los programadores
-      que habían anteriormente modificaron el archivo utilizaron tab o espacios para la indentación, no revisamos si
-      dejamos espacios en blancos entre lineas, o si al guardar el archivo lo guardamos con la encodificación charset.
-    </p>
+    <h2>
+      Automatizando
+    </h2>
+    <p> Definidos los estilos de código(según la naturaleza del proyecto)
+    podríamos tener estilos de código muy generales como por ejemplo:
+    usar tabs para el estilo de indentación(indent style) o muy especificos
+    como por ejemplo: usar 4 columnas de indentación(indent size) solo para
+    los archivos html. Definir los estilos de código nos ayudará mucho como equipo
+    pero pero hacerlos aplicarlos manualmente será un dolor de cabeza constante
+    porque tocará revisar constantemente que estilos debemos aplicar a cada archivo
+    y mantener informado al equipo sobre cada modificación de ellos.</p>
+
+    <p>Para eso existe EditorConfig, para ayudarnos a automatizar y centralizar
+    los estilos de código, usarlo es tan sencillo como agregar a nuestro proyecto el
+    archivo .editorconfig con todas los estilos de códigos </p>
   </body>
 </html>
