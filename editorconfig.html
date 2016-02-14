@@ -84,11 +84,21 @@
       el formato que hayamos definido siempre y cuando se abra y guarde el archivo.</b></p>
     <h3>Migrando</h3>
     <p>
-      Hasta ahora hemos entendido el papel fundamental que tiene EditorConfig en el momento
-      de estandarizar y el tiempo que nos va ahorrar definiendo en un solo archivo de estilos
+      Hasta ahora hemos entendido el papel fundamental que tiene EditorConfig al momento
+      de estandarizar y el tiempo que nos va a ahorrar definiendo en un solo archivo de estilos
       que funcione en cualquier IDE, pero ¿Qué pasa si ya tenemos un proyecto avanzado
       y queremos aplicarlo? Tendríamos que abrir y cerrar todos los archivos para que Editorconfig
-      los formateé.
+      los formateé. Para ello podemos utilizar alguna herramienta que nos permita refactorizar
+      nuestros archivos en base a nuestro archivo editorconfig.
     </p>
+    <p>
+      Podemos utilizar por ejemplo un npm que nos ayude a hacer el formateo de forma
+      automática, un paquete bastante utilizado es editorconfig-tools. Lo primero que debemos hacer
+      es instalar de forma global el paquete:
+    </p>
+    <code>
+      npm install -g editorconfig-tools
+    </code>
+
   </body>
 </html>
